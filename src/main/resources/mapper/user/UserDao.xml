@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yanferr.user.dao.UserDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.yanferr.user.entity.UserEntity" id="userMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="phone" column="phone"/>
+        <result property="email" column="email"/>
+        <result property="profession" column="profession"/>
+        <result property="age" column="age"/>
+        <result property="gender" column="gender"/>
+        <result property="status" column="status"/>
+        <result property="createtime" column="createtime"/>
+    </resultMap>
+    <update id="updateUserNameById">
+        UPDATE tb_user SET name=#{name} WHERE id=#{id}
+    </update>
+
+
+</mapper>
